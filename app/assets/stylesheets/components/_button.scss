@@ -1,0 +1,19 @@
+.btn-taco {
+  background-color: none;
+  border-style: solid;
+  border-color: #ff66c4;
+  padding: 10px 40px;
+  border-radius: 50px;
+  color: #ff66c4;
+  margin-top: 10px;
+  &:hover {
+    color: rgba(255, 102, 196, 0.7);
+    border-style: solid;
+    border-color: rgba(255, 102, 196, 0.7);
+    transition: ease;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    // transition-delay: 0.2s
+  }
+}
