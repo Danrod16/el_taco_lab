@@ -1,7 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Cases</h1>
-
+<% @cases.each do |case| %>
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading"><%= case.name %></h2>
+      <p class="lead"><%= case.description %></p>
+    </div>
+    <div class="col-md-5">
+      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><%= image_tag "case.photo" %></svg>
+    </div>
+  </div>
+<% end %>
 <table>
   <thead>
     <tr>
@@ -14,7 +24,6 @@
   </thead>
 
   <tbody>
-    <% @cases.each do |case| %>
       <tr>
         <td><%= case.name %></td>
         <td><%= case.photo %></td>
@@ -24,7 +33,6 @@
         <td><%= link_to 'Edit', edit_case_path(case) %></td>
         <td><%= link_to 'Destroy', case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-    <% end %>
   </tbody>
 </table>
 
