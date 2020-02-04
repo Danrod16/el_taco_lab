@@ -1,0 +1,22 @@
+
+.login {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 92vh;
+  background-image: url("https://res.cloudinary.com/therainycloud/image/upload/v1580823688/El_Taco_lab_4_1_zfcehh.png");
+  background-position: right;
+}
+
+.form-devise {
+  max-width: 400px;
+  max-height: 450px;
+  padding: 50px 70px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white !important;
+  border-radius: 10px;
+  a {
+    color: #ff66c4;
+  }
+}
