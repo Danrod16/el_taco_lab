@@ -8,7 +8,9 @@
       <p class="lead"><%= c.description  %> </p>
     </div>
     <div class="col-md-5">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><%= cl_image_tag c.photo%></svg>
+      <div style="width: 300px; height: 300px; object-fit: cover;">
+        <%= cl_image_tag c.photo.key, height: 300, width: 400, crop: :fill %></svg>
+      </div>
     </div>
   </div>
 <% end %>
