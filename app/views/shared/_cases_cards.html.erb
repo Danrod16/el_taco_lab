@@ -1,20 +1,17 @@
-<div class="row">
-<% @cases.each do |c| %>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"> <%= cl_image_tag c.photo.key, height: 300, width: 400, crop: :fill %></svg>
-            <div class="card-body">
-              <h4><%=  c.name %> </h4>
-              <p class="card-text"><%= c.description %></p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
+<div class="container">
+  <h1>Our work</h1>
+  <div class="cards">
+    <% @cases.each do |c| %>
+        <div class="card-trip">
+          <%= cl_image_tag c.photo.key %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%=  c.name %></h2>
+              <p><%= c.description %></p>
             </div>
+            <h2 class="card-trip-pricing"></h2>
           </div>
         </div>
-      </div>
-<% end %> -->
+    <% end %>
+  </div>
+</div>
