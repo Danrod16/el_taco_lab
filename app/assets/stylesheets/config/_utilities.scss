@@ -1,5 +1,10 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   background-color: white !important;
+
 }
 
 a {
@@ -8,6 +13,10 @@ a {
     transition-property: all;
     transition-duration: 0.2s;
     transition-timing-function: ease;
+    color: rgba(0, 0, 0, 0.5) !important;
+    &:hover {
+      color: #ff66c4 !important;
+    }
 }
 
 h3 {
